@@ -1,0 +1,599 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<style type="text/css">
+#apDiv21 {
+	position: absolute;
+	width: 1870px;
+	height: 300px;
+	z-index: 11;
+	left: 3px;
+	top: 3727px;
+	background-color: #b0e1a2;
+	font-weight: normal;
+}
+</style>
+
+
+
+<head>
+
+        
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA Compatible" content="ie=edge"
+<meta name="viewport" content="width=device-width,initial-scale"
+
+
+<meta charset="utf-8">
+		<title>jQuery轮播图平滑过渡，自动播放</title>
+<script src="js/jquery-1.10.2.js"></script>
+<script src="js/rotation_chart.js" type="text/javascript" charset="utf-8"></script>
+<link rel="stylesheet" href="static/css/normalize.min.css">
+<link rel="stylesheet" href="static/css/style.css">
+<title>无标题文档</title>
+
+</head>
+<style type="text/css">
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	font-family: "方正兰亭粗黑简体";
+	font-weight: bold;
+	font-size: 20px;
+	color: #FFA1B3;
+}
+.1 {
+	font-size: 24px;
+}
+.2 {
+	font-family: "方正兰亭粗黑简体";
+	font-size: 20px;
+	font-weight: bold;
+	color:#006633;
+}
+body,td,th {
+	color: #006633;
+}
+a:link {
+	color:#85b0a3;
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+	color: #006633;
+}
+a:hover {
+	text-decoration: none;
+}
+a:active {
+	text-decoration: none;
+}
+* {
+				padding: 0;
+				margin: 0;
+			}
+			.focus {
+				border: 0px solid black;
+				margin: 50px auto;
+			}
+#apDiv1 {
+	position: absolute;
+	width: 622px;
+	height: 333px;
+	z-index: 1;
+	left: 4px;
+	top: 135px;
+}
+#apDiv1 {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 72px;
+	font-weight: bold;
+	color: #ffa1b3;
+}
+#apDiv2 {
+	position: absolute;
+	width: 818px;
+	height: 116px;
+	z-index: 1;
+	font-family: "方正颜宋简体";
+	font-size: 72px;
+	font-weight: bold;
+	color: #b0e1a2;
+	left: 98px;
+	top: 78px;
+	text-align: left;
+}
+#apDiv3 {
+	position: absolute;
+	width: 60px;
+	height: 96px;
+	z-index: 2;
+	left: 42px;
+	top: 87px;
+}
+#apDiv4 {
+	position: absolute;
+	width: 232px;
+	height: 541px;
+	z-index: 3;
+	left: 76px;
+	top: 356px;
+}
+#apDiv4 {
+	font-family: "方正小标宋简体";
+	font-size: 48px;
+	text-align: center;
+}
+.5 {
+	font-size: 48px;
+	color: #0d6f57;
+	font-weight: normal;
+	text-align: left;
+}
+.6 {
+	font-size: 48px;
+	text-align: left;
+	color: #85b0a3;
+}
+#apDiv5 {
+	position: absolute;
+	width: 181px;
+	height: 500px;
+	z-index: 3;
+	left: 285px;
+	top: 227px;
+	word-spacing: normal;
+}
+#8 {
+	font-family: "方正兰亭粗黑简体";
+}
+#apDiv5 .5 {
+	font-family: "方正颜宋简体";
+	font-size: 48px;
+	font-weight: normal;
+	color: #85b0a3;
+}
+#apDiv6 {
+	position: absolute;
+	width: 434px;
+	height: 548px;
+	z-index: 4;
+	left: 471px;
+	top: 220px;
+}
+#apDiv7 {
+	position: absolute;
+	width: 787px;
+	height: 115px;
+	z-index: 5;
+	left: 53px;
+	top: 749px;
+}
+#apDiv8 {
+	position: absolute;
+	width: 67px;
+	height: 104px;
+	z-index: 1;
+	left: 810px;
+	top: 720px;
+}
+#apDiv9 {
+	position: absolute;
+	width: 1797px;
+	height: 141px;
+	z-index: 6;
+	top: 3089px;
+	left: 33px;
+}
+#apDiv10 {
+	position: absolute;
+	width: 1873px;
+	height: 115px;
+	z-index: 6;
+	left: -1px;
+	top: 905px;
+	color: #006666;
+}
+#apDiv11 {
+	position: absolute;
+	width: 1880px;
+	height: 693px;
+	z-index: 6;
+	left: -3px;
+	top: 925px;
+}
+#apDiv12 {
+	position: absolute;
+	width: 1772px;
+	height: 92px;
+	z-index: 7;
+	left: 46px;
+	top: -14px;
+}
+
+#apDiv13 {
+	position: absolute;
+	width: 1871px;
+	height: 892px;
+	z-index: 7;
+	left: -2px;
+	top: 1745px;
+}
+#apDiv14 {
+	position: absolute;
+	width: 1780px;
+	height: 83px;
+	z-index: 1;
+	left: 46px;
+	top: -63px;
+}
+#apDiv15 {
+	position: absolute;
+	width: 566px;
+	height: 555px;
+	z-index: 8;
+	top: 207px;
+	left: 1066px;
+}
+#apDiv13 table tr td #apDiv15 marquee p {
+	font-family: "方正颜宋简体";
+	font-size: 20px;
+	color: #85b0a3;
+}
+#apDiv13 table tr td {
+	font-family: "方正颜宋简体";
+	font-size: 30px;
+	color: #85b0a3;
+}
+#apDiv13 table tr td #apDiv15 marquee p {
+	font-family: "方正颜宋简体";
+	font-size: 24px;
+	color: #85b0a3;
+	text-align: center;
+	line-height: normal;
+	font-weight: normal;
+}
+#apDiv16 {
+	position: absolute;
+	width: 639px;
+	height: 674px;
+	z-index: 8;
+	top: 120px;
+	left: 5px;
+}
+#apDiv17 {
+	position: absolute;
+	width: 1870px;
+	height: 68px;
+	z-index: 8;
+	left: 0;
+	top: 0;
+}
+#apDiv18 {
+	position: absolute;
+	width: 1870px;
+	height: 500px;
+	z-index: 9;
+	left: 86px;
+	top: 2900px;
+}
+#apDiv19 {
+	position: absolute;
+	width: 1784px;
+	height: 135px;
+	z-index: 10;
+	left: 25px;
+	top: 2733px;
+}
+#apDiv20 {
+	position: absolute;
+	width: 200px;
+	height: 115px;
+	z-index: 11;
+	left: -16px;
+	top: 3194px;
+}
+*{
+	padding:0;
+	margin:0;
+}
+body{
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	height:100vh;
+}
+.shell{
+	width:90%;
+	height:700px;
+	display:flex;
+}
+.box{
+	flex:1;
+	overflow:hidden;
+	transition:.5s;
+	margin:0 20px;
+	box-shadow::10px 10px 20px rgba(0,0,0,2);
+	border-radius:20px;
+	border:10px s0lid #fff;
+	background-color:#fff;
+}
+.box>img{
+	width:200%;
+	height:85%;
+	object-fit:cover;
+	transition:.5s;
+}
+.box>span{
+	font:200 36px "方正颜宋简体";
+	color:#85b0a3;
+	text-align:center;
+	height:15%;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+}
+.box:hover{
+	flex-basis:40%;
+}
+.box:hover>img{
+	width:100%;
+	height:100%;
+}
+#apDiv21 table tr td p {
+	font-weight: normal;
+	font-family: "方正颜宋简体";
+}
+#apDiv21 table {
+	line-height: 40px;
+}
+#apDiv21 p {
+	text-align: center;
+	font-family: "方正颜宋简体";
+	font-weight: normal;
+	line-height: 30px;
+}
+</style>
+<script type="text/javascript">
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+</script>
+</head>
+
+<body bgcolor="#FAFFD6" marginwidth="110" onload="MM_preloadImages('素材/psc (13).jpg','素材/QQ图片20230610012840.jpg','素材/QQ图片20230610142419.jpg','素材/QQ图片20230610142424.jpg')">
+<div id="apDiv17">
+  <table bgcolor="#B0E1A2" width="1870" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td width="369" rowspan="2" align="center" class="1" style="color: #FFA1B3; font-size: 30px;"> 花花的草草世界</td>
+      <td width="471" height="37">&nbsp;</td>
+      <td width="1060" align="right" style="color: #000000; font-size: 14px; font-weight: normal;"><span style="text-align: right"></span>
+        <table width="1000" border="0" cellspacing="0" cellpadding="0">
+          <tr> </tr>
+      </table></td>
+    </tr>
+    <tr>
+      <td height="23">&nbsp;</td>
+      <td><table width="660
+    " border="0" align="right" cellpadding="0" cellspacing="0">
+        <tr>
+          <td width="110" height="23" align="left" class="2" style="color: #006633">我的主页</a></td>
+          <td width="110" align="left" class="2" style="color: #006633">家庭成员</a></td>
+          <td width="110" align="left" class="2" style="color: #006633; font-weight: bold; font-size: 20px; font-family: '方正兰亭粗黑简体';">好朋友们</a></td>
+          <td width="110" align="left" class="2" style="color: #006633; font-weight: bold; font-size: 20px; font-family: '方正兰亭粗黑简体';">学习之路</a></td>
+          <td width="110" align="left" class="2" style="color: #006633; font-weight: bold; font-size: 20px; font-family: '方正兰亭粗黑简体';">兴趣爱好</a></td>
+          <td width="110" align="left" class="2" style="color: #006633; font-weight: bold; font-size: 20px; font-family: '方正兰亭粗黑简体';">更多</a></td>
+        </tr>
+      </table></td>
+    </tr>
+  </table>
+</div>
+
+
+<table align="right" width="1870" height="549" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="1006"><div id="apDiv2">——-<span id="8" style="font-family: '方正颜宋简体'; text-align: center;">-个人简介</span>——---</div>
+    <div id="apDiv3"><img src="素材/花花.png" width="61" height="97" /></div>
+    <div class="5" id="apDiv5">
+      <p class="5" style="line-height: 50px; color: #85b0a3; font-size: 36px; font-family: '方正颜宋简体'; font-weight: bold;">姓 &nbsp;名：</p>
+      <p class="5" style="line-height: 50px; color: #85b0a3; font-size: 36px; font-family: '方正颜宋简体'; font-weight: bold;">英 &nbsp;文： </p>
+      <p class="5" style="line-height: 50px; color: #85b0a3; font-size: 36px; font-family: '方正颜宋简体'; font-weight: bold;">性 &nbsp;别： </p>
+      <p class="5" style="line-height: 50px; color: #85b0a3; font-size: 36px; font-family: '方正颜宋简体'; font-weight: bold;">民 &nbsp;族：</p>
+      <p class="5" style="line-height: 50px; color: #85b0a3; font-size: 36px; font-family: '方正颜宋简体'; font-weight: bold;">生 &nbsp;日：</p>
+      <p class="5" style="line-height: 50px; color: #85b0a3; font-size: 36px; font-family: '方正颜宋简体'; font-weight: bold;">年 &nbsp;龄：</p>
+      <p class="5" style="line-height: 50px; color: #85b0a3; font-size: 36px; font-family: '方正颜宋简体'; font-weight: bold;">专 &nbsp;业：</p>
+      <p class="5" style="line-height: 50px; color: #85b0a3; font-size: 36px; font-family: '方正颜宋简体'; font-weight: bold;">学 &nbsp;历：</p>
+      <p class="5" style="line-height: 50px; color: #85b0a3; font-size: 36px; font-family: '方正颜宋简体'; font-weight: bold;">邮 &nbsp;箱：</p>
+      <p class="5" style="line-height: 50px; color: #85b0a3; font-size: 36px; font-family: '方正颜宋简体'; font-weight: bold;">住 &nbsp;址：</p>
+      <p class="5" style="line-height: 50px; color: #85b0a3; font-size: 36px; font-family: '方正颜宋简体'; font-weight: bold;">&nbsp;</p>
+    </div>
+    
+      <div id="apDiv7" style="color: #b0e1a2; font-size: 72px; font-family: '方正颜宋简体';">
+        <p>————————-——</p>
+      </div>
+      <div id="apDiv6">
+      <p style="line-height: 55px; color: #85b0a3; font-size: 36px; font-family: '方正颜宋简体'; font-weight: normal;">冯兰</p>
+      <p style="line-height: 55px; color: #85b0a3; font-size: 36px; font-family: '方正颜宋简体'; font-weight: normal;">Shannon</p>
+      <p style="line-height: 50px; color: #85b0a3; font-size: 36px; font-family: '方正颜宋简体'; font-weight: normal;">女</p>
+      <p style="color: #85b0a3; font-size: 36px; font-family: '方正颜宋简体'; font-weight: normal;">汉族</p>
+      <p style="line-height: 60px; color: #85b0a3; font-size: 36px; font-family: '方正颜宋简体'; font-weight: normal;">9月26日</p>
+      <p style="line-height: 40px; color: #85b0a3; font-size: 36px; font-family: '方正颜宋简体'; font-weight: normal;">20岁</p>
+      <p style="line-height: 50px; color: #85b0a3; font-size: 36px; font-family: '方正颜宋简体'; font-weight: normal;">视觉与新媒体</p>
+      <p style="line-height: 50px; color: #85b0a3; font-size: 36px; font-family: '方正颜宋简体'; font-weight: normal;">本科</p>
+      <p style="line-height: 50px; color: #85b0a3; font-size: 36px; font-family: '方正颜宋简体'; font-weight: normal;">3526305314@qq.com</p>
+      <p style="line-height: 50px; color: #85b0a3; font-size: 36px; font-family: '方正颜宋简体'; font-weight: normal;">地球村4组6号</p>
+      <p>&nbsp;</p>
+    </div>
+    <div id="apDiv8"><img src="素材/花花.png" alt="" width="61" height="97" /></div>
+   
+    <div id="apDiv11">
+      <table width="1870" height="682" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td height="96" colspan="2" align="left"><div id="apDiv12" style="color: #b0e1a2; font-family: '方正颜宋简体'; font-size: 66px;">———我的性格————</div></td>
+          <td width="622">&nbsp;</td>
+        </tr>
+        <tr>
+          <td width="620" align="center"><a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image10','','素材/QQ图片20230610142419.jpg',1)"><img src="素材/开朗.jpg" width="520" height="400" id="Image10" /></a></td>
+          <td width="620" align="center"><a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image8','','素材/QQ图片20230610012840.jpg',1)"><img src="素材/未标题-1.jpg" width="520" height="400" id="Image8" /></a></td>
+          <td width="620" align="center"><a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image9','','素材/QQ图片20230610142424.jpg',1)"><img src="素材/lan.jpg" width="520" height="400" id="Image9" /></a></td>
+          </tr>
+        </table>
+    </div>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <div id="apDiv18">
+    
+    <div class="shell">
+    <div class="box">
+         <img src="素材/psc (3).jpg" />
+         <span>我家的花花</span>
+      </div>
+      <div class="box">
+         <img src="素材/psc (5).jpg" />
+         <span>我家的肥白</span>
+      </div>
+      <div class="box">
+         <img src="素材/psc (7).jpg"/>
+         <span>回家路上</span>
+      </div>
+      <div class="box">
+         <img src="素材/psc (6).jpg" />
+         <span>下班路上</span>
+      </div>
+      <div class="box">
+         <img src="素材/psc (10).jpg"/>
+         <span>学画画</span>
+      </div>
+     </div>
+     
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+    </div>
+    
+    <div id="apDiv19" style="color: #b0e1a2; font-size: 66px; font-family: '方正颜宋简体';">——喜欢记录————</div>
+    <div id="apDiv13">
+      <div id="apDiv14" style="color: #b0e1a2; font-size: 66px; font-family: '方正颜宋简体';">———喜欢听歌————</div>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <table width="1871" height="727" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td width="767" rowspan="3" align="center">
+          <div id="apDiv16">
+          <div class="image">
+	<img src="素材/.2.jpg"alt="Unsplash Image" width="111%" height="138%">
+</div>
+</div></td>
+          <td width="1104" height="54" align="center"><a href="素材/QQ视频.mp4">나의 계절에게 (Our Season)</a></td>
+        </tr>
+        <tr>
+          <td height="42" align="center">재찬</td>
+        </tr>
+        <tr>
+          <td height="607" align="center">
+            <div id="apDiv15"><marquee behavior="scroll" direction="up">
+              <p>우리 함께 한 모든 순간 모두</p>
+              <p> 모아서 여기 남기고 싶어</p>
+              <p>너와 내가 남긴 흔적과 </p>
+              <p>기억들을 꺼내 볼 수 있게</p>
+              <p>참 빠른 시간 속에서 난 너의 손 꼭 잡고</p>
+              <p>기억해 기억해 순간을 영원토록 기억해 볼게</p>
+              <p>You and I 멀어진대도</p>
+              <p>I wanna be your love</p>
+              <p>수많은 계절에게</p>
+              <p> 우리를 들려줘</p>
+              <p>언제나 너와 함께한다면</p>
+              <p>행복하다고 눈부신 </p>
+              <p>저 하늘에</p>
+              <p>환하게 새겨줘 이 순간</p>
+              <p>너란 봄이 내게로 다가왔던 날 네</p>
+              <p> 기억이 영원하길 기도해</p>
+              <p>나 너만을 위해서 들어줄게</p>
+              <p>Every day every night</p>
+              <p>&nbsp;</p>
+              </marquee>
+              <p></p>
+            </div>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p></td>
+        </tr>
+      </table>
+      <p>&nbsp;</p>
+</div></td>
+    <td align="right" width="864"><div class="focus">
+			<ul>
+				<li><img src="素材/QQ图片20230609161842.jpg" width="950" height="650" /></li>
+				<li><img src="素材/QQ图片20230609161739.jpg" width="950" height="650"></li>
+				<li><img src="素材/QQ图片20230609162020.jpg" width="950" height="650"></li>
+				<li><img src="素材/QQ图片20230609162113.jpg" width="950" height="650"></li>
+			</ul>
+			<ol>
+			</ol>
+			<span class="lb_l">&lt;</span>
+			<span class="lb_r">&gt;</span>
+		</div></td>
+  </tr>
+</table>
+
+
+<p>&nbsp;</p>
+<div id="apDiv21" style="line-height: 30px; font-size: 20px; font-family: '方正颜宋简体';">
+  <p>&nbsp;</p>
+  <p>www.Shannon.indnet.com</p>
+  <p>想要了解更多请联系******</p>
+  <p>寄语：</p>
+  <p>生活真的很美好，</p>
+  <p>因为</p>
+  <p>美丽的花花</p>
+  <p>可爱的小狗</p>
+  <p>温暖的阳光</p>
+  <p>··········</p>
+</div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+</body>
+
+<script>
+		var focusWidth = 900; // 轮播图的宽
+		var focusHeight = 700; // 轮播图的高
+		var focusOlLeft = 500; // 小点距左边框距离
+		var focusOlTop = 5; // 小点距下边框距离
+		var rotation_Speed = 1500; // 轮播图自动播放速度 毫秒
+		setRotation(focusWidth, focusHeight, focusOlLeft, focusOlTop, shuffingSpeed);
+	</script>
+</html>
